@@ -73,7 +73,7 @@ function toggleFaq(btn) {
 }
 
 // ── WhatsApp number — CHANGE THIS to the owner's real number (country code + number, no + or spaces)
-const WA_NUMBER = '447423696012';
+const WA_NUMBER = '447405767887';
 
 // ── Form Submit → WhatsApp redirect
 function handleFormSubmit(btn) {
