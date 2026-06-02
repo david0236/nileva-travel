@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nileva Travel — Private and personalized Egypt travel experiences. Cairo, Luxor, Aswan, Nile Cruises, Hurghada, Sharm El Sheikh.">
+<title>Nileva Travel — Discover Egypt Beyond the Ordinary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/201234567890?text=Hello%20Nileva%20Travel!%20I'm%20interested%20in%20a%20trip%20to%20Egypt." 
+   class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()"><span data-en>About</span><span data-ar>عن نيلفا</span><span data-fr>À propos</span><span data-ja>会社情報</span></a>
+  <a href="#destinations" onclick="closeMobile()"><span data-en>Destinations</span><span data-ar>وجهات</span><span data-fr>Destinations</span><span data-ja>目的地</span></a>
+  <a href="#packages" onclick="closeMobile()"><span data-en>Tours</span><span data-ar>جولات</span><span data-fr>Circuits</span><span data-ja>ツアー</span></a>
+  <a href="#contact" onclick="closeMobile()"><span data-en>Contact</span><span data-ar>تواصل</span><span data-fr>Contact</span><span data-ja>お問合せ</span></a>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <a href="#" class="nav-logo"><strong>Nileva</strong> Travel</a>
+  <ul class="nav-links">
+    <li><a href="#about"><span data-en>About</span><span data-ar>عن نيلفا</span><span data-fr>À propos</span><span data-ja>会社情報</span></a></li>
+    <li><a href="#destinations"><span data-en>Destinations</span><span data-ar>وجهات</span><span data-fr>Destinations</span><span data-ja>目的地</span></a></li>
+    <li><a href="#packages"><span data-en>Tours</span><span data-ar>جولات</span><span data-fr>Circuits</span><span data-ja>ツアー</span></a></li>
+    <li><a href="#why-us"><span data-en>Why Us</span><span data-ar>لماذا نحن</span><span data-fr>Pourquoi nous</span><span data-ja>選ばれる理由</span></a></li>
+    <li><a href="#blog"><span data-en>Blog</span><span data-ar>مدونة</span><span data-fr>Blog</span><span data-ja>ブログ</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langBtn">🌐 EN ▾</button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-option" onclick="setLang('en')">🇬🇧 English</button>
+        <button class="lang-option" onclick="setLang('ar')">🇪🇬 العربية</button>
+        <button class="lang-option" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-option" onclick="setLang('ja')">🇯🇵 日本語</button>
+      </div>
+    </div>
+    <a href="#contact" class="nav-cta">
+      <span data-en>Plan My Trip</span>
+      <span data-ar>خطط لرحلتي</span>
+      <span data-fr>Planifier</span>
+      <span data-ja>旅を計画</span>
+    </a>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  <span class="ann-dot"></span>
+  <span data-en>✨ Multilingual support: English, Arabic, French, Japanese &nbsp;|&nbsp; Free personalized itinerary planning &nbsp;|&nbsp; WhatsApp: available 24/7</span>
+  <span data-ar>✨ دعم متعدد اللغات: عربي، إنجليزي، فرنسي، ياباني &nbsp;|&nbsp; خدمة واتساب متاحة 24/7</span>
+  <span data-fr>✨ Support multilingue: Anglais, Arabe, Français, Japonais &nbsp;|&nbsp; WhatsApp disponible 24h/24</span>
+  <span data-ja>✨ 多言語対応：英語・アラビア語・フランス語・日本語 &nbsp;|&nbsp; WhatsApp 24時間対応</span>
+  <span class="ann-dot"></span>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-label">
+      <span data-en>Egypt Travel Specialists</span>
+      <span data-ar>متخصصون في السياحة المصرية</span>
+      <span data-fr>Spécialistes du voyage en Égypte</span>
+      <span data-ja>エジプト旅行のスペシャリスト</span>
+    </div>
+    <h1>
+      <span data-en>Discover Egypt<br><strong>Beyond the Ordinary</strong></span>
+      <span data-ar>اكتشف مصر<br><strong>خارج المألوف</strong></span>
+      <span data-fr>Découvrez l'Égypte<br><strong>Au-delà de l'Ordinaire</strong></span>
+      <span data-ja>エジプトを発見<br><strong>非日常の旅へ</strong></span>
+    </h1>
+    <p class="hero-sub">
+      <span data-en>Private and personalized Egypt travel experiences with multilingual support and deep local expertise. From Cairo to the Red Sea — we handle everything.</span>
+      <span data-ar>تجارب سفر مصرية خاصة ومخصصة مع دعم متعدد اللغات وخبرة محلية عميقة. من القاهرة إلى البحر الأحمر — نتولى كل شيء.</span>
+      <span data-fr>Expériences de voyage privées et personnalisées en Égypte avec support multilingue et expertise locale approfondie. Du Caire à la Mer Rouge — nous gérons tout.</span>
+      <span data-ja>多言語サポートと深い現地の専門知識を持つ、プライベートでパーソナライズされたエジプト旅行体験。カイロから紅海まで、すべてにお任せください。</span>
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">
+        <span data-en>Plan Your Trip</span>
+        <span data-ar>خطط لرحلتك</span>
+        <span data-fr>Planifiez votre voyage</span>
+        <span data-ja>旅を計画する</span>
+      </a>
+      <a href="#destinations" class="btn btn-outline">
+        <span data-en>Explore Tours</span>
+        <span data-ar>استكشف الجولات</span>
+        <span data-fr>Explorer les circuits</span>
+        <span data-ja>ツアーを見る</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div> Scroll</div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">500+</div>
+      <div class="hero-stat-label">Happy Travelers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">15+</div>
+      <div class="hero-stat-label">Egypt Destinations</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label">Languages</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">24/7</div>
+      <div class="hero-stat-label">Support</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img class="about-img-main" 
+          src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80" 
+          alt="Egypt travel experience" loading="lazy">
+        <img class="about-img-accent"
+          src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=400&q=80"
+          alt="Nile cruise" loading="lazy">
+        <div class="about-badge">
+          <div class="about-badge-num">100%</div>
+          <div class="about-badge-text">Personalized</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="label">
+          <span data-en>Who We Are</span>
+          <span data-ar>من نحن</span>
+          <span data-fr>Qui sommes-nous</span>
+          <span data-ja>私たちについて</span>
+        </p>
+        <h2 class="heading-lg reveal">
+          <span data-en>Two Partners.<br>One Mission.<br>Unforgettable Egypt.</span>
+          <span data-ar>شريكان.<br>مهمة واحدة.<br>مصر لا تُنسى.</span>
+          <span data-fr>Deux partenaires.<br>Une mission.<br>L'Égypte inoubliable.</span>
+          <span data-ja>二人のパートナー。<br>一つのミッション。<br>忘れられないエジプト。</span>
+        </h2>
+        <p class="body-lg reveal reveal-delay-1">
+          <span data-en>Nileva Travel was built on a simple belief: every traveler deserves more than a standard tour. We combine international communication expertise with deep, on-the-ground knowledge of Egypt to craft journeys that feel truly personal.</span>
+          <span data-ar>تأسست نيلفا للسفر على اعتقاد بسيط: يستحق كل مسافر أكثر من جولة قياسية. نجمع بين خبرة التواصل الدولي والمعرفة العميقة بمصر لصياغة رحلات تبدو شخصية حقاً.</span>
+          <span data-fr>Nileva Travel a été fondée sur une conviction simple : chaque voyageur mérite plus qu'une visite standard. Nous combinons l'expertise en communication internationale avec une connaissance approfondie de l'Égypte.</span>
+          <span data-ja>ニレバ・トラベルはシンプルな信念から生まれました：すべての旅行者は標準的なツアー以上のものを受け取る資格があります。国際的なコミュニケーションの専門知識とエジプトの深い現地知識を組み合わせています。</span>
+        </p>
+        <div class="about-pillars reveal reveal-delay-2">
+          <div class="pillar">
+            <div class="pillar-icon">🎯</div>
+            <div>
+              <h4><span data-en>Fully Personalized</span><span data-ar>مخصص بالكامل</span><span data-fr>Entièrement personnalisé</span><span data-ja>完全個別対応</span></h4>
+              <p><span data-en>No two trips are the same. Your journey, your pace.</span><span data-ar>لا توجد رحلتان متشابهتان. رحلتك، وتيرتك.</span><span data-fr>Aucun voyage n'est identique.</span><span data-ja>同じ旅は二つとありません。</span></p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔍</div>
+            <div>
+              <h4><span data-en>Transparent Pricing</span><span data-ar>أسعار شفافة</span><span data-fr>Prix transparents</span><span data-ja>透明な料金</span></h4>
+              <p><span data-en>Clear quotes, no hidden fees, no surprises.</span><span data-ar>عروض واضحة، بدون رسوم مخفية.</span><span data-fr>Devis clairs, sans frais cachés.</span><span data-ja>明確な見積もり、隠れた費用なし。</span></p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌍</div>
+            <div>
+              <h4><span data-en>Local Experts</span><span data-ar>خبراء محليون</span><span data-fr>Experts locaux</span><span data-ja>現地の専門家</span></h4>
+              <p><span data-en>Born in Egypt, living every detail for you.</span><span data-ar>مولود في مصر، يعيش كل تفاصيل رحلتك.</span><span data-fr>Nés en Égypte, maîtrisant chaque détail.</span><span data-ja>エジプト生まれ、すべての詳細を把握。</span></p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">✈️</div>
+            <div>
+              <h4><span data-en>Stress-Free Travel</span><span data-ar>سفر بدون توتر</span><span data-fr>Voyage sans stress</span><span data-ja>ストレスフリーな旅</span></h4>
+              <p><span data-en>We handle logistics, so you just enjoy.</span><span data-ar>نتولى اللوجستيات، أنت فقط استمتع.</span><span data-fr>Nous gérons la logistique, profitez.</span><span data-ja>物流はすべてお任せ。楽しむだけ。</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="team-intro reveal reveal-delay-3">
+          <div class="team-member-mini">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Partner 1" loading="lazy">
+            <h5><span data-en>International Partner</span><span data-ar>الشريك الدولي</span><span data-fr>Partenaire international</span><span data-ja>国際担当パートナー</span></h5>
+            <p><span data-en>Sales · Marketing · Multilingual</span><span data-ar>مبيعات · تسويق · متعدد اللغات</span><span data-fr>Ventes · Marketing · Multilingue</span><span data-ja>営業・マーケティング・多言語</span></p>
+          </div>
+          <div class="team-divider"></div>
+          <div class="team-member-mini">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Partner 2" loading="lazy">
+            <h5><span data-en>Egypt Operations Partner</span><span data-ar>شريك العمليات المصري</span><span data-fr>Partenaire opérations Égypte</span><span data-ja>エジプト現地担当パートナー</span></h5>
+            <p><span data-en>Hotels · Guides · Cruises · 🇯🇵 日本語対応</span><span data-ar>فنادق · مرشدون · رحلات نيلية · ياباني</span><span data-fr>Hôtels · Guides · Croisières · 🇯🇵</span><span data-ja>ホテル・ガイド・クルーズ・日本語対応</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DESTINATIONS ═══════════════ -->
+<section class="destinations section" id="destinations">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="label"><span data-en>Where Will You Go</span><span data-ar>إلى أين ستذهب</span><span data-fr>Où irez-vous</span><span data-ja>どこへ行きますか</span></p>
+        <h2 class="heading-lg"><span data-en>Egypt's Finest <br>Destinations</span><span data-ar>أجمل وجهات مصر</span><span data-fr>Les plus belles<br>destinations d'Égypte</span><span data-ja>エジプトの<br>名所を巡る</span></h2>
+      </div>
+      <a href="#packages" class="btn-ghost">
+        <span data-en>All Tours</span><span data-ar>جميع الجولات</span><span data-fr>Tous les circuits</span><span data-ja>全ツアー</span>
+      </a>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80" alt="Cairo" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>The Capital</span><span data-ar>العاصمة</span><span data-fr>La Capitale</span><span data-ja>首都</span></p>
+          <h3 class="dest-name"><span data-en>Cairo</span><span data-ar>القاهرة</span><span data-fr>Le Caire</span><span data-ja>カイロ</span></h3>
+          <p class="dest-desc"><span data-en>Pyramids, the Egyptian Museum, Khan el-Khalili bazaars and a city that never sleeps.</span><span data-ar>الأهرامات والمتحف المصري وأسواق خان الخليلي ومدينة لا تنام.</span><span data-fr>Pyramides, musée égyptien, bazars de Khan el-Khalili.</span><span data-ja>ピラミッド、エジプト博物館、カーン・エル・ハリーリ市場。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?w=700&q=80" alt="Luxor" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>Upper Egypt</span><span data-ar>صعيد مصر</span><span data-fr>Haute-Égypte</span><span data-ja>上エジプト</span></p>
+          <h3 class="dest-name">Luxor</h3>
+          <p class="dest-desc"><span data-en>Karnak Temple, Valley of the Kings, hot air balloons at sunrise.</span><span data-ar>معبد الكرنك، وادي الملوك، بالونات الهواء الساخن.</span><span data-fr>Temple de Karnak, Vallée des Rois.</span><span data-ja>カルナック神殿、王家の谷。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=80" alt="Aswan" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>The Jewel</span><span data-ar>جوهرة مصر</span><span data-fr>Le Joyau</span><span data-ja>宝石</span></p>
+          <h3 class="dest-name">Aswan</h3>
+          <p class="dest-desc"><span data-en>Abu Simbel, Philae Temple, Nubian villages and the serene Nile.</span><span data-ar>أبو سمبل، معبد فيلة، القرى النوبية.</span><span data-fr>Abou Simbel, temple de Philae.</span><span data-ja>アブ・シンベル神殿、フィラエ神殿。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=80" alt="Hurghada" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>Red Sea</span><span data-ar>البحر الأحمر</span><span data-fr>Mer Rouge</span><span data-ja>紅海</span></p>
+          <h3 class="dest-name">Hurghada</h3>
+          <p class="dest-desc"><span data-en>Crystal waters, vibrant coral reefs, world-class diving and beach resorts.</span><span data-ar>مياه كريستالية، شعاب مرجانية، غوص عالمي.</span><span data-fr>Eaux cristallines, récifs coralliens.</span><span data-ja>透明な海、サンゴ礁、世界クラスのダイビング。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=700&q=80" alt="Sharm El Sheikh" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>Sinai Peninsula</span><span data-ar>شبه جزيرة سيناء</span><span data-fr>Péninsule du Sinaï</span><span data-ja>シナイ半島</span></p>
+          <h3 class="dest-name">Sharm El Sheikh</h3>
+          <p class="dest-desc"><span data-en>Luxury resorts, Ras Mohammed National Park and the world's most spectacular coral.</span><span data-ar>منتجعات فاخرة، محمية رأس محمد.</span><span data-fr>Stations balnéaires de luxe, parc Ras Mohammed.</span><span data-ja>高級リゾート、ラス・モハメド国立公園。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80" alt="Nile Cruise" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-info">
+          <p class="dest-region"><span data-en>The River of Life</span><span data-ar>نهر الحياة</span><span data-fr>Le Fleuve de Vie</span><span data-ja>生命の川</span></p>
+          <h3 class="dest-name"><span data-en>Nile Cruises</span><span data-ar>رحلات النيل</span><span data-fr>Croisières Nil</span><span data-ja>ナイルクルーズ</span></h3>
+          <p class="dest-desc"><span data-en>Sail between Luxor and Aswan on a private felucca or luxury Nile cruise.</span><span data-ar>أبحر بين الأقصر وأسوان على فلوكة خاصة أو رحلة نيلية فاخرة.</span><span data-fr>Naviguez entre Louxor et Assouan.</span><span data-ja>ルクソールとアスワンの間を航行。</span></p>
+          <span class="dest-cta"><span data-en>Explore</span><span data-ar>استكشف</span><span data-fr>Explorer</span><span data-ja>探索する</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TOUR PACKAGES ═══════════════ -->
+<section class="packages section" id="packages">
+  <div class="container">
+    <p class="label">
+      <span data-en>Curated Experiences</span><span data-ar>تجارب مختارة</span><span data-fr>Expériences sélectionnées</span><span data-ja>厳選された体験</span>
+    </p>
+    <h2 class="heading-lg reveal">
+      <span data-en>Tour Packages</span><span data-ar>باقات الجولات</span><span data-fr>Forfaits de voyage</span><span data-ja>ツアーパッケージ</span>
+    </h2>
+    <div class="package-tabs" id="pkgTabs">
+      <button class="pkg-tab active" data-cat="all"><span data-en>All Packages</span><span data-ar>جميع الباقات</span><span data-fr>Tous</span><span data-ja>全て</span></button>
+      <button class="pkg-tab" data-cat="classic"><span data-en>Classic</span><span data-ar>كلاسيكي</span><span data-fr>Classique</span><span data-ja>クラシック</span></button>
+      <button class="pkg-tab" data-cat="luxury"><span data-en>Luxury</span><span data-ar>فاخر</span><span data-fr>Luxe</span><span data-ja>ラグジュアリー</span></button>
+      <button class="pkg-tab" data-cat="cruise"><span data-en>Nile Cruise</span><span data-ar>رحلة النيل</span><span data-fr>Croisière Nil</span><span data-ja>ナイルクルーズ</span></button>
+      <button class="pkg-tab" data-cat="red-sea"><span data-en>Red Sea</span><span data-ar>البحر الأحمر</span><span data-fr>Mer Rouge</span><span data-ja>紅海</span></button>
+    </div>
+    <div class="pkg-grid" id="pkgGrid">
+      <!-- Card 1 -->
+      <div class="pkg-card" data-cat="classic">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80" alt="Classic Egypt" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">8 Days</p>
+          <h3 class="pkg-name"><span data-en>Classic Egypt Explorer</span><span data-ar>مستكشف مصر الكلاسيكي</span><span data-fr>Explorateur d'Égypte classique</span><span data-ja>クラシックエジプト探検</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>Cairo: Pyramids, Sphinx, Egyptian Museum</span><span data-ar>القاهرة: الأهرامات، أبو الهول، المتحف</span><span data-fr>Le Caire: Pyramides, Sphinx, Musée</span><span data-ja>カイロ：ピラミッド、スフィンクス</span></li>
+            <li><span data-en>Luxor: Karnak, Valley of the Kings</span><span data-ar>الأقصر: الكرنك، وادي الملوك</span><span data-fr>Louxor: Karnak, Vallée des Rois</span><span data-ja>ルクソール：カルナック</span></li>
+            <li><span data-en>Aswan: Philae, Abu Simbel</span><span data-ar>أسوان: فيلة، أبو سمبل</span><span data-fr>Assouan: Philae, Abou Simbel</span><span data-ja>アスワン：フィラエ</span></li>
+            <li><span data-en>Private guided tours throughout</span><span data-ar>جولات خاصة بمرشد طوال الرحلة</span><span data-fr>Visites guidées privées</span><span data-ja>プライベートガイドツアー</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>1,290</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="pkg-card featured" data-cat="luxury">
+        <div class="pkg-badge">Most Popular</div>
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Luxury Egypt" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">12 Days</p>
+          <h3 class="pkg-name"><span data-en>Luxury Private Egypt</span><span data-ar>مصر الفاخرة الخاصة</span><span data-fr>Égypte Privée Luxe</span><span data-ja>ラグジュアリー・プライベートエジプト</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>5-star hotels throughout</span><span data-ar>فنادق 5 نجوم طوال الرحلة</span><span data-fr>Hôtels 5 étoiles</span><span data-ja>全行程5つ星ホテル</span></li>
+            <li><span data-en>Private Nile cruise Luxor–Aswan</span><span data-ar>رحلة نيلية خاصة الأقصر–أسوان</span><span data-fr>Croisière privée Louxor–Assouan</span><span data-ja>プライベートナイルクルーズ</span></li>
+            <li><span data-en>Hot air balloon over Luxor</span><span data-ar>بالون هواء ساخن فوق الأقصر</span><span data-fr>Montgolfière au-dessus de Louxor</span><span data-ja>ルクソール上空の熱気球</span></li>
+            <li><span data-en>Red Sea extension available</span><span data-ar>إضافة البحر الأحمر متاحة</span><span data-fr>Extension Mer Rouge disponible</span><span data-ja>紅海オプション可能</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>3,850</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="pkg-card" data-cat="cruise">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=600&q=80" alt="Nile Cruise" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">7 Days</p>
+          <h3 class="pkg-name"><span data-en>Nile Cruise Journey</span><span data-ar>رحلة النيل الكروز</span><span data-fr>Croisière sur le Nil</span><span data-ja>ナイルクルーズの旅</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>Luxurious cruise ship cabin</span><span data-ar>كابينة على سفينة كروز فاخرة</span><span data-fr>Cabine sur un bateau de croisière</span><span data-ja>豪華クルーズ船キャビン</span></li>
+            <li><span data-en>All meals and excursions included</span><span data-ar>جميع الوجبات والجولات مشمولة</span><span data-fr>Tous repas et excursions inclus</span><span data-ja>全食事・エクスカーション込み</span></li>
+            <li><span data-en>Expert Egyptologist guide</span><span data-ar>مرشد مصريات متخصص</span><span data-fr>Guide égyptologue expert</span><span data-ja>専門エジプト学者ガイド</span></li>
+            <li><span data-en>Felucca sailing at sunset</span><span data-ar>إبحار فلوكة عند الغروب</span><span data-fr>Navigation en felouque au coucher</span><span data-ja>夕暮れのファルーカ帆走</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>2,100</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="pkg-card" data-cat="red-sea">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Red Sea" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">6 Days</p>
+          <h3 class="pkg-name"><span data-en>Red Sea Escape</span><span data-ar>هروب البحر الأحمر</span><span data-fr>Évasion en Mer Rouge</span><span data-ja>紅海エスケープ</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>Sharm El Sheikh or Hurghada</span><span data-ar>شرم الشيخ أو الغردقة</span><span data-fr>Charm el-Cheikh ou Hurghada</span><span data-ja>シャルム・エル・シェイクまたはフルガダ</span></li>
+            <li><span data-en>Private snorkeling & diving trips</span><span data-ar>جولات غوص وشنوركل خاصة</span><span data-fr>Plongée et snorkeling privés</span><span data-ja>プライベートシュノーケリング</span></li>
+            <li><span data-en>5-star beachfront resort</span><span data-ar>منتجع 5 نجوم على الشاطئ</span><span data-fr>Resort 5 étoiles en bord de mer</span><span data-ja>5つ星ビーチフロントリゾート</span></li>
+            <li><span data-en>Optional: combine with Cairo</span><span data-ar>اختياري: دمج مع القاهرة</span><span data-fr>Optionnel: combiné avec Le Caire</span><span data-ja>オプション：カイロと組み合わせ</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>1,680</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="pkg-card" data-cat="classic">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1580834341580-8c17a3a630ca?w=600&q=80" alt="Family Tour" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">10 Days</p>
+          <h3 class="pkg-name"><span data-en>Family Egypt Adventure</span><span data-ar>مغامرة عائلية في مصر</span><span data-fr>Aventure familiale en Égypte</span><span data-ja>ファミリーエジプト冒険</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>Child-friendly activities & pacing</span><span data-ar>أنشطة وتيرة مناسبة للأطفال</span><span data-fr>Activités adaptées aux enfants</span><span data-ja>子供向けアクティビティ</span></li>
+            <li><span data-en>Cairo, Luxor, Red Sea combo</span><span data-ar>دمج القاهرة والأقصر والبحر الأحمر</span><span data-fr>Combiné Le Caire, Louxor, Mer Rouge</span><span data-ja>カイロ・ルクソール・紅海コンボ</span></li>
+            <li><span data-en>Private transfers throughout</span><span data-ar>سيارات خاصة طوال الرحلة</span><span data-fr>Transferts privés inclus</span><span data-ja>全行程プライベート送迎</span></li>
+            <li><span data-en>Family-rated hotels</span><span data-ar>فنادق مناسبة للعائلات</span><span data-fr>Hôtels adaptés familles</span><span data-ja>ファミリー向けホテル</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>1,950</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="pkg-card" data-cat="luxury">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&q=80" alt="Cultural Tour" loading="lazy">
+        </div>
+        <div class="pkg-body">
+          <p class="pkg-duration">14 Days</p>
+          <h3 class="pkg-name"><span data-en>Deep Cultural Immersion</span><span data-ar>الغوص الثقافي العميق</span><span data-fr>Immersion culturelle profonde</span><span data-ja>深い文化体験</span></h3>
+          <ul class="pkg-highlights">
+            <li><span data-en>Off-the-beaten-path experiences</span><span data-ar>تجارب بعيدة عن المسارات المطروقة</span><span data-fr>Expériences hors des sentiers battus</span><span data-ja>観光地以外の体験</span></li>
+            <li><span data-en>Nubian village homestay</span><span data-ar>إقامة في قرية نوبية</span><span data-fr>Séjour chez l'habitant nubien</span><span data-ja>ヌビア村のホームステイ</span></li>
+            <li><span data-en>Private Egyptologist throughout</span><span data-ar>مصريات خاص طوال الرحلة</span><span data-fr>Égyptologue privé tout au long</span><span data-ja>専属エジプト学者</span></li>
+            <li><span data-en>Exclusive after-hours temple access</span><span data-ar>دخول حصري للمعابد بعد الإغلاق</span><span data-fr>Accès exclusif hors heures</span><span data-ja>閉館後の神殿への独占アクセス</span></li>
+          </ul>
+          <div class="pkg-footer">
+            <div>
+              <p class="pkg-price-label"><span data-en>From per person</span><span data-ar>من للشخص</span><span data-fr>Dès par personne</span><span data-ja>1人あたり</span></p>
+              <p class="pkg-price"><span>$</span>5,200</p>
+            </div>
+            <a href="#contact" class="pkg-cta"><span data-en>Book</span><span data-ar>احجز</span><span data-fr>Réserver</span><span data-ja>予約</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY US ═══════════════ -->
+<section class="why-us section" id="why-us">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="label"><span data-en>The Nileva Difference</span><span data-ar>ميزة نيلفا</span><span data-fr>La différence Nileva</span><span data-ja>ニレバの特長</span></p>
+        <h2 class="heading-lg"><span data-en>Why Travelers<br>Choose Us</span><span data-ar>لماذا يختارنا المسافرون</span><span data-fr>Pourquoi nous choisir</span><span data-ja>選ばれる理由</span></h2>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🌐</div>
+        <h4 class="why-title"><span data-en>Multilingual Support</span><span data-ar>دعم متعدد اللغات</span><span data-fr>Support multilingue</span><span data-ja>多言語サポート</span></h4>
+        <p class="why-desc"><span data-en>We communicate in English, Arabic, French, and Japanese. Your comfort starts with being understood.</span><span data-ar>نتواصل بالإنجليزية والعربية والفرنسية واليابانية. راحتك تبدأ بأن تكون مفهوماً.</span><span data-fr>Nous communiquons en anglais, arabe, français et japonais.</span><span data-ja>英語・アラビア語・フランス語・日本語で対応。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">✍️</div>
+        <h4 class="why-title"><span data-en>Personalized Itineraries</span><span data-ar>مسارات مخصصة</span><span data-fr>Itinéraires personnalisés</span><span data-ja>個別カスタム行程</span></h4>
+        <p class="why-desc"><span data-en>Every trip is designed specifically for you. Tell us your dream and we'll build it, day by day.</span><span data-ar>كل رحلة مصممة خصيصاً لك. أخبرنا بحلمك وسنبنيه يوماً بيوم.</span><span data-fr>Chaque voyage est conçu spécifiquement pour vous.</span><span data-ja>すべての旅程はあなたのために設計されます。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">🤝</div>
+        <h4 class="why-title"><span data-en>Trusted Local Network</span><span data-ar>شبكة محلية موثوقة</span><span data-fr>Réseau local de confiance</span><span data-ja>信頼できる現地ネットワーク</span></h4>
+        <p class="why-desc"><span data-en>Vetted hotels, top guides, and reliable transport — we've spent years building the best relationships in Egypt.</span><span data-ar>فنادق موثوقة، مرشدون متميزون، ونقل موثوق.</span><span data-fr>Hôtels vérifiés, meilleurs guides et transport fiable.</span><span data-ja>厳選されたホテル、トップガイド、信頼できる交通機関。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">🚗</div>
+        <h4 class="why-title"><span data-en>Private & Comfortable</span><span data-ar>خاص ومريح</span><span data-fr>Privé et confortable</span><span data-ja>プライベート＆快適</span></h4>
+        <p class="why-desc"><span data-en>No sharing with strangers. Private vehicles, private guides, private moments — travel on your terms.</span><span data-ar>لا مشاركة مع الغرباء. مركبات وأدلة خاصة.</span><span data-fr>Aucun partage avec des inconnus. Privé à 100%.</span><span data-ja>見知らぬ人と一緒にはなりません。完全プライベート。</span></p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">💎</div>
+        <h4 class="why-title"><span data-en>Transparent Pricing</span><span data-ar>أسعار شفافة</span><span data-fr>Prix transparents</span><span data-ja>透明な料金体系</span></h4>
+        <p class="why-desc"><span data-en>Clear quotes upfront. What you see is what you pay — no hidden fees, no unexpected costs.</span><span data-ar>عروض أسعار واضحة مقدماً. بدون رسوم مخفية.</span><span data-fr>Devis clairs dès le départ. Sans frais cachés.</span><span data-ja>明確な事前見積もり。隠れた費用なし。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">📞</div>
+        <h4 class="why-title"><span data-en>24/7 Support</span><span data-ar>دعم على مدار الساعة</span><span data-fr>Assistance 24h/24</span><span data-ja>24時間サポート</span></h4>
+        <p class="why-desc"><span data-en>We're always reachable via WhatsApp and phone — before, during, and after your journey.</span><span data-ar>متاحون دائماً عبر واتساب والهاتف.</span><span data-fr>Joignable à tout moment via WhatsApp.</span><span data-ja>旅行前・中・後もWhatsAppでいつでも対応。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">⭐</div>
+        <h4 class="why-title"><span data-en>Premium Experience</span><span data-ar>تجربة متميزة</span><span data-fr>Expérience premium</span><span data-ja>プレミアム体験</span></h4>
+        <p class="why-desc"><span data-en>From airport arrival to final farewell — every touchpoint is thoughtful, organized, and warm.</span><span data-ar>من الوصول إلى المطار حتى الوداع — كل نقطة تماس مدروسة.</span><span data-fr>De l'arrivée à l'aéroport jusqu'aux adieux finaux.</span><span data-ja>空港到着から最後のお別れまで。</span></p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">🇯🇵</div>
+        <h4 class="why-title"><span data-en>Japanese-Speaking Guide</span><span data-ar>مرشد ناطق باليابانية</span><span data-fr>Guide japonophone</span><span data-ja>日本語ガイド対応</span></h4>
+        <p class="why-desc"><span data-en>Our Egypt-based partner speaks Japanese and has years of experience guiding Japanese travelers through Egypt.</span><span data-ar>شريكنا المصري يتحدث اليابانية ولديه سنوات من تجربة إرشاد السياح اليابانيين.</span><span data-fr>Notre partenaire égyptien parle japonais.</span><span data-ja>エジプト拠点のパートナーが日本語を話し、日本人旅行者を案内した豊富な経験があります。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NILE CRUISE BANNER ═══════════════ -->
+<div class="nile-banner">
+  <div class="nile-banner-bg"></div>
+  <div class="nile-banner-content reveal">
+    <p class="label"><span data-en>Featured Experience</span><span data-ar>تجربة مميزة</span><span data-fr>Expérience phare</span><span data-ja>注目体験</span></p>
+    <h2 class="heading-lg">
+      <span data-en>Sail the Nile in<br>Private Luxury</span>
+      <span data-ar>أبحر في النيل<br>بفخامة خاصة</span>
+      <span data-fr>Naviguez sur le Nil<br>en luxe privé</span>
+      <span data-ja>プライベートな贅沢で<br>ナイル川を航行する</span>
+    </h2>
+    <p class="body-lg">
+      <span data-en>A Nile cruise is not just transportation — it's the heart of the Egyptian experience. Watch temples emerge from the riverbank as you sail in comfort between Luxor and Aswan.</span>
+      <span data-ar>رحلة النيل ليست مجرد وسيلة نقل — إنها قلب التجربة المصرية. شاهد المعابد تظهر من ضفاف النهر.</span>
+      <span data-fr>Une croisière sur le Nil n'est pas qu'un transport — c'est le cœur de l'expérience égyptienne.</span>
+      <span data-ja>ナイルクルーズは単なる移動手段ではありません——エジプト体験の核心です。</span>
+    </p>
+    <div class="nile-feat">
+      <div class="nile-feat-item"><span>🛳</span><span><span data-en>Luxury Cabins</span><span data-ar>كبائن فاخرة</span><span data-fr>Cabines luxe</span><span data-ja>豪華キャビン</span></span></div>
+      <div class="nile-feat-item"><span>🍽</span><span><span data-en>All Meals Included</span><span data-ar>جميع الوجبات</span><span data-fr>Repas inclus</span><span data-ja>全食事込み</span></span></div>
+      <div class="nile-feat-item"><span>🏛</span><span><span data-en>Expert Guide</span><span data-ar>مرشد خبير</span><span data-fr>Guide expert</span><span data-ja>専門ガイド</span></span></div>
+    </div>
+    <a href="#contact" class="btn btn-primary" style="margin-top:32px">
+      <span data-en>Inquire About Cruises</span>
+      <span data-ar>استفسر عن الرحلات</span>
+      <span data-fr>Renseignements croisières</span>
+      <span data-ja>クルーズについて問い合わせる</span>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="label"><span data-en>Guest Stories</span><span data-ar>قصص ضيوفنا</span><span data-fr>Témoignages</span><span data-ja>旅行者の声</span></p>
+        <h2 class="heading-lg"><span data-en>What Our Travelers Say</span><span data-ar>ما يقوله مسافرونا</span><span data-fr>Ce que disent nos voyageurs</span><span data-ja>旅行者の体験談</span></h2>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <span class="testi-quote">"</span>
+        <div class="testi-flag">🇫🇷</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Nileva Travel organized our 10-day trip completely. From Cairo to Aswan, everything was perfect. Our guide was incredible — and the private Nile cruise was a dream. We will come back."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Sophie" loading="lazy"></div>
+          <div>
+            <p class="testi-name">Sophie & Pierre M.</p>
+            <p class="testi-location">Paris, France · Cairo & Nile Cruise</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <span class="testi-quote">"</span>
+        <div class="testi-flag">🇯🇵</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"日本語でのサポートが素晴らしく、エジプトの全てが完璧に手配されていました。現地パートナーの方は本当に親切で、安心して旅ができました。また絶対利用します。"</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Tanaka" loading="lazy"></div>
+          <div>
+            <p class="testi-name">田中 健太郎</p>
+            <p class="testi-location">Tokyo, Japan · Full Egypt Tour</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <span class="testi-quote">"</span>
+        <div class="testi-flag">🇬🇧</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We were nervous first-time visitors to Egypt. Nileva made us feel completely safe and taken care of. The private tour of the Valley of the Kings was the highlight of our lives."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Emma" loading="lazy"></div>
+          <div>
+            <p class="testi-name">Emma & David L.</p>
+            <p class="testi-location">London, UK · Luxury Egypt 12 Days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BLOG ═══════════════ -->
+<section class="blog section" id="blog">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="label"><span data-en>Travel Guides</span><span data-ar>أدلة السفر</span><span data-fr>Guides de voyage</span><span data-ja>旅行ガイド</span></p>
+        <h2 class="heading-lg"><span data-en>Egypt Travel Blog</span><span data-ar>مدونة السفر إلى مصر</span><span data-fr>Blog voyage Égypte</span><span data-ja>エジプト旅行ブログ</span></h2>
+      </div>
+      <a href="#" class="btn-ghost"><span data-en>All Articles</span><span data-ar>جميع المقالات</span><span data-fr>Tous les articles</span><span data-ja>全記事</span></a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80" alt="Egypt tips" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-cat"><span data-en>Travel Tips</span><span data-ar>نصائح السفر</span><span data-fr>Conseils voyage</span><span data-ja>旅行のヒント</span></p>
+          <h3 class="blog-title"><span data-en>Is Egypt Safe to Visit? An Honest 2025 Guide</span><span data-ar>هل مصر آمنة للزيارة؟ دليل صادق لعام 2025</span><span data-fr>L'Égypte est-elle sûre? Guide honnête 2025</span><span data-ja>エジプトは安全？2025年正直ガイド</span></h3>
+          <p class="blog-excerpt"><span data-en>Millions visit Egypt safely every year. Here's what you actually need to know about safety, scams to avoid, and how to travel with confidence.</span><span data-ar>ملايين يزورون مصر بأمان كل عام. إليك ما تحتاج لمعرفته عن السلامة.</span><span data-fr>Des millions visitent l'Égypte en toute sécurité chaque année.</span><span data-ja>毎年何百万人もが安全にエジプトを訪れています。</span></p>
+          <div class="blog-meta"><span>📅 Jan 2025</span><span>⏱ 8 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-1">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?w=600&q=80" alt="Luxor" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-cat"><span data-en>Destination Guide</span><span data-ar>دليل الوجهات</span><span data-fr>Guide destination</span><span data-ja>目的地ガイド</span></p>
+          <h3 class="blog-title"><span data-en>Top 10 Things to Do in Luxor, Egypt</span><span data-ar>أفضل 10 أشياء تفعلها في الأقصر</span><span data-fr>Top 10 à faire à Louxor</span><span data-ja>ルクソールでやるべき10のこと</span></h3>
+          <p class="blog-excerpt"><span data-en>Luxor is the world's greatest open-air museum. From the Valley of Kings to sunrise balloon rides, here are the unmissable experiences.</span><span data-ar>الأقصر هو أعظم متحف مفتوح في العالم.</span><span data-fr>Louxor est le plus grand musée à ciel ouvert du monde.</span><span data-ja>ルクソールは世界最大の野外博物館です。</span></p>
+          <div class="blog-meta"><span>📅 Feb 2025</span><span>⏱ 11 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-2">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=600&q=80" alt="Nile Cruise" loading="lazy"></div>
+        <div class="blog-body">
+          <p class="blog-cat"><span data-en>Nile Cruises</span><span data-ar>رحلات النيل</span><span data-fr>Croisières sur le Nil</span><span data-ja>ナイルクルーズ</span></p>
+          <h3 class="blog-title"><span data-en>The Complete Nile Cruise Guide: What to Expect</span><span data-ar>الدليل الشامل لرحلات النيل</span><span data-fr>Guide complet des croisières sur le Nil</span><span data-ja>ナイルクルーズ完全ガイド</span></h3>
+          <p class="blog-excerpt"><span data-en>What's included, what to pack, which cabin to choose, and how to pick the right Nile cruise for your budget and style.</span><span data-ar>ما هو مشمول، ماذا تحزم، أي كبينة تختار.</span><span data-fr>Ce qui est inclus, quoi emporter, quelle cabine choisir.</span><span data-ja>含まれるもの、持ち物、キャビン選びのコツ。</span></p>
+          <div class="blog-meta"><span>📅 Mar 2025</span><span>⏱ 14 min read</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOCIAL PROOF ═══════════════ -->
+<section class="social-proof section-sm">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 40px;" class="reveal">
+      <p class="label"><span data-en>Follow Our Journey</span><span data-ar>تابع رحلتنا</span><span data-fr>Suivez notre aventure</span><span data-ja>旅をフォロー</span></p>
+      <h3 class="heading-md"><span data-en>Egypt Through Our Lens</span><span data-ar>مصر من خلال عدستنا</span><span data-fr>L'Égypte à travers notre objectif</span><span data-ja>私たちのレンズで見るエジプト</span></h3>
+    </div>
+    <div class="social-grid">
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+      <div class="social-item"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&q=80" alt="" loading="lazy"><div class="social-item-overlay"><span>📷</span></div></div>
+    </div>
+    <p class="social-handle reveal"><span data-en>Follow us on Instagram</span><span data-ar>تابعنا على انستغرام</span><span data-fr>Suivez-nous sur Instagram</span><span data-ja>Instagramでフォロー</span> <a href="#">@NilevaTravel</a></p>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="faq section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="label"><span data-en>Common Questions</span><span data-ar>أسئلة شائعة</span><span data-fr>Questions fréquentes</span><span data-ja>よくある質問</span></p>
+        <h2 class="heading-lg"><span data-en>FAQ</span><span data-ar>الأسئلة الشائعة</span><span data-fr>FAQ</span><span data-ja>よくある質問</span></h2>
+      </div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>Do I need a visa to visit Egypt?</span><span data-ar>هل أحتاج تأشيرة لزيارة مصر؟</span><span data-fr>Ai-je besoin d'un visa pour l'Égypte?</span><span data-ja>エジプトにビザは必要ですか？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>Most nationalities can get a visa on arrival or an e-visa online before travel. We guide all our clients through the process and handle any documentation support needed.</span><span data-ar>معظم الجنسيات يمكنها الحصول على تأشيرة عند الوصول أو تأشيرة إلكترونية. نرشد جميع عملائنا خلال العملية.</span><span data-fr>La plupart des nationalités peuvent obtenir un visa à l'arrivée ou un e-visa en ligne.</span><span data-ja>多くの国籍はアライバルビザまたはeビザで入国可能です。手続きをサポートします。</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>What is the best time to visit Egypt?</span><span data-ar>ما هو أفضل وقت لزيارة مصر؟</span><span data-fr>Quelle est la meilleure période pour visiter?</span><span data-ja>エジプト旅行に最適な時期は？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>October to April is ideal — comfortable temperatures across Egypt. Summer (June–August) is very hot in Upper Egypt but the Red Sea is wonderful year-round.</span><span data-ar>أكتوبر حتى أبريل هو الوقت المثالي — درجات حرارة مريحة. البحر الأحمر رائع طوال العام.</span><span data-fr>Octobre à avril est idéal. La mer Rouge est magnifique toute l'année.</span><span data-ja>10月〜4月が理想的です。紅海は一年中素晴らしいです。</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>Are your tours fully private?</span><span data-ar>هل جولاتكم خاصة بالكامل؟</span><span data-fr>Vos circuits sont-ils entièrement privés?</span><span data-ja>ツアーは完全プライベートですか？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>Yes. All Nileva Travel tours are 100% private — your own vehicle, your own guide, your own pace. We do not mix groups.</span><span data-ar>نعم. جميع جولات نيلفا خاصة 100% — سيارتك الخاصة، مرشدك الخاص، وتيرتك الخاصة.</span><span data-fr>Oui. Tous nos circuits sont 100% privés. Nous ne mélangeons pas les groupes.</span><span data-ja>はい。すべてのツアーは100%プライベートです。グループを混ぜることはありません。</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>How do I pay? Is a deposit required?</span><span data-ar>كيف أدفع؟ هل يلزم دفع وديعة؟</span><span data-fr>Comment payer? Un dépôt est-il requis?</span><span data-ja>支払い方法は？デポジットは必要ですか？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>We accept bank transfer and major cards. A 20% deposit confirms your booking, with the balance due 30 days before departure. Full flexibility for unforeseen situations.</span><span data-ar>نقبل التحويل البنكي والبطاقات الرئيسية. وديعة 20% لتأكيد الحجز.</span><span data-fr>Nous acceptons le virement bancaire et les principales cartes. Un acompte de 20% confirme la réservation.</span><span data-ja>銀行振込と主要カードを受け付けています。20%のデポジットで予約確定。</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>Can you accommodate special dietary requirements?</span><span data-ar>هل يمكنكم استيعاب متطلبات غذائية خاصة؟</span><span data-fr>Pouvez-vous accommoder des régimes spéciaux?</span><span data-ja>特別な食事制限に対応できますか？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>Absolutely. We accommodate vegetarian, vegan, halal, gluten-free, and all other dietary needs. Just let us know when inquiring and we plan accordingly.</span><span data-ar>بالطبع. نوفر الطعام النباتي والحلال وخالي من الغلوتين وغيرها.</span><span data-fr>Absolument. Végétarien, vegan, halal, sans gluten — dites-nous et nous planifions.</span><span data-ja>もちろんです。ベジタリアン、ビーガン、ハラール、グルテンフリーなどに対応します。</span></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-en>Do you arrange airport pickups?</span><span data-ar>هل تنظمون استقبال المطار؟</span><span data-fr>Organisez-vous les transferts aéroport?</span><span data-ja>空港送迎の手配はしてもらえますか？</span>
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer"><p><span data-en>Yes — every single client is met at the airport with a Nileva representative holding a sign with your name. Your Egypt experience begins the moment you land.</span><span data-ar>نعم — كل عميل يُستقبل في المطار بممثل نيلفا يحمل لافتة باسمك.</span><span data-fr>Oui — chaque client est accueilli à l'aéroport par un représentant Nileva.</span><span data-ja>はい——すべてのお客様を空港でニレバのスタッフがお名前の札を持ってお迎えします。</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <p class="label"><span data-en>Start Planning Today</span><span data-ar>ابدأ التخطيط اليوم</span><span data-fr>Commencez à planifier</span><span data-ja>今日から計画を始める</span></p>
+        <h2 class="heading-lg">
+          <span data-en>Your Dream Egypt<br>Trip Starts Here</span>
+          <span data-ar>رحلتك المصرية<br>الحلم تبدأ هنا</span>
+          <span data-fr>Votre voyage de rêve<br>en Égypte commence ici</span>
+          <span data-ja>夢のエジプト旅行は<br>ここから始まります</span>
+        </h2>
+        <p class="body-lg">
+          <span data-en>Tell us your dates, interests, and budget. We'll craft a personalized itinerary and quote within 24 hours — no pressure, no obligation.</span>
+          <span data-ar>أخبرنا بتواريخك واهتماماتك وميزانيتك. سنصمم لك مساراً مخصصاً وعرضاً خلال 24 ساعة.</span>
+          <span data-fr>Dites-nous vos dates, intérêts et budget. Nous créerons un itinéraire personnalisé sous 24h.</span>
+          <span data-ja>日程、興味、予算をお知らせください。24時間以内に個別の行程と見積もりを作成します。</span>
+        </p>
+        <div class="contact-channel">
+          <div class="contact-channel-icon">💬</div>
+          <div class="contact-channel-text">
+            <h4>WhatsApp</h4>
+            <p>+20 123 456 7890 · <span data-en>Available 24/7</span><span data-ar>متاح 24/7</span><span data-fr>Disponible 24h/24</span><span data-ja>24時間対応</span></p>
+          </div>
+        </div>
+        <div class="contact-channel">
+          <div class="contact-channel-icon">📧</div>
+          <div class="contact-channel-text">
+            <h4>Email</h4>
+            <p>hello@nilevatravel.com</p>
+          </div>
+        </div>
+        <div class="contact-channel">
+          <div class="contact-channel-icon">📍</div>
+          <div class="contact-channel-text">
+            <h4><span data-en>Based in Egypt</span><span data-ar>مقرنا في مصر</span><span data-fr>Basé en Égypte</span><span data-ja>エジプト拠点</span></h4>
+            <p><span data-en>Cairo, Egypt · Operating across all Egypt</span><span data-ar>القاهرة، مصر · نعمل في جميع أنحاء مصر</span><span data-fr>Le Caire, Égypte · Opérations dans toute l'Égypte</span><span data-ja>カイロ・エジプト全土で運営</span></p>
+          </div>
+        </div>
+        <a href="https://wa.me/201234567890?text=Hello%20Nileva%20Travel!" class="whatsapp-cta" target="_blank">
+          <span data-en>Chat on WhatsApp Now</span>
+          <span data-ar>تحدث عبر واتساب الآن</span>
+          <span data-fr>Chattez sur WhatsApp maintenant</span>
+          <span data-ja>今すぐWhatsAppでチャット</span>
+        </a>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <p class="label" style="color:var(--gold)"><span data-en>Quick Inquiry Form</span><span data-ar>نموذج استفسار سريع</span><span data-fr>Formulaire de contact</span><span data-ja>お問い合わせフォーム</span></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label><span data-en>First Name</span><span data-ar>الاسم الأول</span><span data-fr>Prénom</span><span data-ja>名</span></label>
+            <input id="cf-firstname" type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label><span data-en>Last Name</span><span data-ar>اسم العائلة</span><span data-fr>Nom</span><span data-ja>姓</span></label>
+            <input id="cf-lastname" type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input id="cf-email" type="email" placeholder="john@email.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label><span data-en>Travel Dates</span><span data-ar>تواريخ السفر</span><span data-fr>Dates de voyage</span><span data-ja>旅行日程</span></label>
+            <input id="cf-dates" type="text" placeholder="Nov 2025">
+          </div>
+          <div class="form-group">
+            <label><span data-en>No. of Travelers</span><span data-ar>عدد المسافرين</span><span data-fr>Nombre de voyageurs</span><span data-ja>人数</span></label>
+            <input id="cf-pax" type="number" placeholder="2" min="1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label><span data-en>Interested In</span><span data-ar>مهتم بـ</span><span data-fr>Intéressé par</span><span data-ja>興味のあるツアー</span></label>
+          <select id="cf-tour">
+            <option>Classic Egypt Tour</option>
+            <option>Luxury Private Tour</option>
+            <option>Nile Cruise</option>
+            <option>Red Sea Escape</option>
+            <option>Custom Itinerary</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><span data-en>Message</span><span data-ar>رسالة</span><span data-fr>Message</span><span data-ja>メッセージ</span></label>
+          <textarea id="cf-message" placeholder="Tell us about your dream Egypt trip..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleFormSubmit(this)">
+          <span data-en>Send Inquiry via WhatsApp</span>
+          <span data-ar>إرسال استفسار عبر واتساب</span>
+          <span data-fr>Envoyer via WhatsApp</span>
+          <span data-ja>WhatsAppで送信</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo"><strong>Nileva</strong> Travel</span>
+        <p><span data-en>Private and personalized Egypt travel experiences. Multilingual support in English, Arabic, French, and Japanese. Your journey, our expertise.</span><span data-ar>تجارب سفر مصرية خاصة ومخصصة. دعم متعدد اللغات. رحلتك، خبرتنا.</span><span data-fr>Expériences de voyage privées en Égypte. Support multilingue. Votre voyage, notre expertise.</span><span data-ja>プライベートでパーソナライズされたエジプト旅行。多言語サポート。あなたの旅、私たちの専門知識。</span></p>
+        <div class="footer-socials" style="margin-top:20px">
+          <a href="#" class="footer-social">ig</a>
+          <a href="#" class="footer-social">fb</a>
+          <a href="#" class="footer-social">yt</a>
+          <a href="#" class="footer-social">tw</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span data-en>Destinations</span><span data-ar>وجهات</span><span data-fr>Destinations</span><span data-ja>目的地</span></h4>
+        <ul>
+          <li><a href="#destinations">Cairo</a></li>
+          <li><a href="#destinations">Luxor</a></li>
+          <li><a href="#destinations">Aswan</a></li>
+          <li><a href="#destinations">Hurghada</a></li>
+          <li><a href="#destinations">Sharm El Sheikh</a></li>
+          <li><a href="#destinations"><span data-en>Nile Cruises</span><span data-ar>رحلات النيل</span><span data-fr>Croisières</span><span data-ja>ナイルクルーズ</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span data-en>Tours</span><span data-ar>جولات</span><span data-fr>Circuits</span><span data-ja>ツアー</span></h4>
+        <ul>
+          <li><a href="#packages"><span data-en>Classic Egypt</span><span data-ar>مصر الكلاسيكية</span><span data-fr>Égypte classique</span><span data-ja>クラシックエジプト</span></a></li>
+          <li><a href="#packages"><span data-en>Luxury Private</span><span data-ar>خاص فاخر</span><span data-fr>Luxe privé</span><span data-ja>ラグジュアリー</span></a></li>
+          <li><a href="#packages"><span data-en>Family Trips</span><span data-ar>رحلات عائلية</span><span data-fr>Voyages famille</span><span data-ja>家族旅行</span></a></li>
+          <li><a href="#packages"><span data-en>Cultural Tours</span><span data-ar>جولات ثقافية</span><span data-fr>Circuits culturels</span><span data-ja>文化ツアー</span></a></li>
+          <li><a href="#blog"><span data-en>Travel Blog</span><span data-ar>مدونة</span><span data-fr>Blog</span><span data-ja>ブログ</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <label><span data-en>Stay Inspired</span><span data-ar>ابق ملهماً</span><span data-fr>Restez inspiré</span><span data-ja>インスピレーションを保つ</span></label>
+        <p><span data-en>Egypt travel tips, guides, and exclusive offers — straight to your inbox.</span><span data-ar>نصائح السفر إلى مصر والعروض الحصرية.</span><span data-fr>Conseils voyage Égypte et offres exclusives.</span><span data-ja>エジプト旅行のヒントと独占オファー。</span></p>
+        <div class="newsletter-input">
+          <input type="email" placeholder="Your email">
+          <button><span data-en>Join</span><span data-ar>انضم</span><span data-fr>Rejoindre</span><span data-ja>登録</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nileva Travel. <span data-en>All rights reserved.</span><span data-ar>جميع الحقوق محفوظة.</span><span data-fr>Tous droits réservés.</span><span data-ja>無断転載禁止。</span></span>
+    <div class="footer-langs">
+      <span class="footer-lang active" onclick="setLang('en')">EN</span>
+      <span class="footer-lang" onclick="setLang('ar')">AR</span>
+      <span class="footer-lang" onclick="setLang('fr')">FR</span>
+      <span class="footer-lang" onclick="setLang('ja')">JP</span>
+    </div>
+    <div class="footer-bottom-links">
+      <a href="#"><span data-en>Privacy Policy</span><span data-ar>سياسة الخصوصية</span><span data-fr>Politique de confidentialité</span><span data-ja>プライバシーポリシー</span></a>
+      <a href="#"><span data-en>Terms</span><span data-ar>الشروط</span><span data-fr>Conditions</span><span data-ja>利用規約</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
