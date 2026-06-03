@@ -123,3 +123,19 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+
+// ── Gallery slider manual controls
+function galleryShift(dir) {
+  const track = document.getElementById('galleryTrack');
+  track.style.animation = 'none';
+  const slideW = track.querySelector('.gallery-slide').offsetWidth + 12;
+  let current = parseInt(track.dataset.offset || 0);
+  current -= dir * slideW * 2;
+  track.style.transform = `translateX(${current}px)`;
+  track.dataset.offset = current;
+  setTimeout(() => {
+    track.style.transform = '';
+    track.style.animation = '';
+  }, 4000);
+}

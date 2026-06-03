@@ -928,3 +928,57 @@ footer {
   .contact-form { padding: 28px; }
   .ann-bar { font-size: 0.68rem; gap: 8px; flex-wrap: wrap; justify-content: center; }
 }
+
+
+.nav-logo-img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   GALLERY SLIDER
+═══════════════════════════════════════════ */
+.gallery-slider-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.gallery-track {
+  display: flex;
+  gap: 12px;
+  animation: galleryScroll 40s linear infinite;
+  width: max-content;
+}
+.gallery-track:hover { animation-play-state: paused; }
+.gallery-slide {
+  flex-shrink: 0;
+  width: 320px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gallery-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  filter: brightness(0.9);
+}
+.gallery-slide:hover img { transform: scale(1.06); filter: brightness(1); }
+@keyframes galleryScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.gallery-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(15,44,79,0.75);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 44px; height: 44px; border-radius: 50%;
+  font-size: 1.1rem; cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.gallery-btn:hover { background: var(--gold); color: var(--navy); }
+.gallery-btn-prev { left: 16px; }
+.gallery-btn-next { right: 16px; }
