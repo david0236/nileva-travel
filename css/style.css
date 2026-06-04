@@ -982,3 +982,31 @@ footer {
 .gallery-btn:hover { background: var(--gold); color: var(--navy); }
 .gallery-btn-prev { left: 16px; }
 .gallery-btn-next { right: 16px; }
+
+
+/* Footer Social Buttons */
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.fsoc-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(197,162,82,0.35);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+.fsoc-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(197,162,82,0.3);
+}
