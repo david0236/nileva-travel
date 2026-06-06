@@ -1010,3 +1010,60 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(197,162,82,0.3);
 }
+
+/* ── Gallery Slider Mobile Fix */
+@media (max-width: 768px) {
+  .gallery-slide {
+    width: 260px;
+    height: 200px;
+  }
+  .gallery-slider-wrap {
+    margin-top: 20px;
+  }
+  .gallery-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-slide {
+    width: 220px;
+    height: 170px;
+  }
+}
+
+/* ── Nav Logo with image + text */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-img {
+  height: 85px;
+  width: auto;
+  display: block;
+  transition: height 0.3s ease;
+}
+.nav-logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.nav-logo-text strong {
+  font-weight: 600;
+  color: var(--gold);
+}
+#nav.scrolled .nav-logo-img { height: 67px; }
+
+@media (max-width: 768px) {
+  .nav-logo-img { height: 70px; }
+  .nav-logo-text { font-size: 0.9rem; }
+  #nav.scrolled .nav-logo-img { height: 59px; }
+}
