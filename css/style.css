@@ -1037,6 +1037,7 @@ footer {
 /* ── Nav Logo with image + text */
 .nav-logo {
   display: flex;
+   
   align-items: center;
   gap: 10px;
   text-decoration: none;
@@ -1063,7 +1064,13 @@ footer {
 #nav.scrolled .nav-logo-img { height: 67px; }
 
 @media (max-width: 768px) {
-  .nav-logo-img { height: 70px; }
-  .nav-logo-text { font-size: 0.9rem; }
-  #nav.scrolled .nav-logo-img { height: 59px; }
+  .nav-logo-img { height: 52px; }
+  .nav-logo-text { font-size: 0.85rem; }
+  #nav.scrolled .nav-logo-img { height: 42px; }
+}
+
+@media (max-width: 480px) {
+  .nav-logo-img { height: 44px; }
+  .nav-logo-text { font-size: 0.78rem; }
+  #nav.scrolled .nav-logo-img { height: 36px; }
 }
