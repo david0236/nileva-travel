@@ -35,18 +35,34 @@ const langLabels = {
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);
   const { code, label } = langLabels[lang];
-  document.getElementById('langBtn').innerHTML = `<img src="https://flagcdn.com/20x15/${code}.png" alt="${label}" class="lang-flag"> ${label} ▾`;
+  const flagHtml = `<img src="https://flagcdn.com/20x15/${code}.png" alt="${label}" class="lang-flag"> ${label} ▾`;
+  document.getElementById('langBtn').innerHTML = flagHtml;
+  const mb = document.getElementById('langBtnMobile');
+  if (mb) mb.innerHTML = flagHtml;
   document.getElementById('langDropdown').classList.remove('open');
+  const mbd = document.getElementById('langDropdownMobile');
+  if (mbd) mbd.classList.remove('open');
   document.querySelectorAll('.footer-lang').forEach(el => {
     el.classList.toggle('active', el.onclick.toString().includes("'" + lang + "'"));
   });
 }
+// Alias for mobile buttons
+function setLangAll(lang) { setLang(lang); }
 document.getElementById('langBtn').addEventListener('click', (e) => {
   e.stopPropagation();
   document.getElementById('langDropdown').classList.toggle('open');
 });
+const langBtnMobile = document.getElementById('langBtnMobile');
+if (langBtnMobile) {
+  langBtnMobile.addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.getElementById('langDropdownMobile').classList.toggle('open');
+  });
+}
 document.addEventListener('click', () => {
   document.getElementById('langDropdown').classList.remove('open');
+  const mbd = document.getElementById('langDropdownMobile');
+  if (mbd) mbd.classList.remove('open');
 });
 
 // ── Scroll Reveal

@@ -208,6 +208,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .nav-cta:hover { background: var(--gold-light); }
 
+.nav-mobile-right {
+  display: none; align-items: center; gap: 14px; margin-left: auto;
+}
+.lang-switcher-mobile { display: none; }
 .hamburger {
   display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
 }
@@ -911,6 +915,8 @@ footer {
   nav { padding: 20px 24px; }
   #nav.scrolled { padding: 14px 24px; }
   .nav-links, .nav-right { display: none; }
+  .nav-mobile-right { display: flex; }
+  .lang-switcher-mobile { display: flex; }
   .hamburger { display: flex; }
   .hero-content { padding: 0 28px 80px; }
   .hero-stats { display: none; }
