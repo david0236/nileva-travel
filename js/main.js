@@ -25,10 +25,15 @@ function closeMobile() {
 }
 
 // ── Language Switcher
-const langLabels = { en: '🇬🇧 EN', fr: '🇫🇷 FR', ja: '🇯🇵 JP' };
+const langLabels = {
+  en: { code: 'gb', label: 'EN' },
+  fr: { code: 'fr', label: 'FR' },
+  ja: { code: 'jp', label: 'JP' }
+};
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);
-  document.getElementById('langBtn').textContent = langLabels[lang] + ' ▾';
+  const { code, label } = langLabels[lang];
+  document.getElementById('langBtn').innerHTML = `<img src="https://flagcdn.com/20x15/${code}.png" alt="${label}" class="lang-flag"> ${label} ▾`;
   document.getElementById('langDropdown').classList.remove('open');
   document.querySelectorAll('.footer-lang').forEach(el => {
     el.classList.toggle('active', el.onclick.toString().includes("'" + lang + "'"));

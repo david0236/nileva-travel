@@ -184,6 +184,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: color var(--transition), background var(--transition); cursor: pointer;
 }
 .lang-option:hover { color: var(--gold); background: rgba(200,169,107,0.08); }
+.lang-flag { width: 20px; height: 15px; object-fit: cover; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
 
 .nav-cta {
   font-family: 'Montserrat', sans-serif;
