@@ -25,7 +25,7 @@ function closeMobile() {
 }
 
 // ── Language Switcher
-const langLabels = { en: '🌐 EN', fr: '🌐 FR', ja: '🌐 JP' };
+const langLabels = { en: '🇬🇧 EN', fr: '🇫🇷 FR', ja: '🇯🇵 JP' };
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);
   document.getElementById('langBtn').textContent = langLabels[lang] + ' ▾';
