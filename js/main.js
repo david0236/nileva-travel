@@ -28,7 +28,9 @@ function closeMobile() {
 const langLabels = {
   en: { code: 'gb', label: 'EN' },
   fr: { code: 'fr', label: 'FR' },
-  ja: { code: 'jp', label: 'JP' }
+  ja: { code: 'jp', label: 'JP' },
+  zh: { code: 'cn', label: 'ZH' },
+  ru: { code: 'ru', label: 'RU' }
 };
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);

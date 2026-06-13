@@ -116,10 +116,24 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 ═══════════════════════════════════════════ */
 [data-lang="en"] [data-fr],
 [data-lang="en"] [data-ja],
+[data-lang="en"] [data-zh],
+[data-lang="en"] [data-ru],
 [data-lang="fr"] [data-en],
 [data-lang="fr"] [data-ja],
+[data-lang="fr"] [data-zh],
+[data-lang="fr"] [data-ru],
 [data-lang="ja"] [data-en],
-[data-lang="ja"] [data-fr]
+[data-lang="ja"] [data-fr],
+[data-lang="ja"] [data-zh],
+[data-lang="ja"] [data-ru],
+[data-lang="zh"] [data-en],
+[data-lang="zh"] [data-fr],
+[data-lang="zh"] [data-ja],
+[data-lang="zh"] [data-ru],
+[data-lang="ru"] [data-en],
+[data-lang="ru"] [data-fr],
+[data-lang="ru"] [data-ja],
+[data-lang="ru"] [data-zh]
 { display: none !important; }
 
 /* ═══════════════════════════════════════════
