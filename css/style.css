@@ -63,7 +63,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 3rem);
   font-weight: 300; line-height: 1.2;
-  color: var(--blue); letter-spacing: -0.02em;
+  color: var(--white); letter-spacing: -0.02em;
 }
 .heading-md {
   font-family: 'Montserrat', sans-serif;
@@ -346,7 +346,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* ═══════════════════════════════════════════
    ABOUT
 ═══════════════════════════════════════════ */
-.about { background: var(--off); }
+.about { background: var(--blue); }
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
 }
@@ -384,15 +384,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .pillar {
   display: flex; align-items: flex-start; gap: 14px;
-  padding: 18px; background: var(--white); border-radius: var(--radius);
+  padding: 18px; background: rgba(255,255,255,0.06);
   border-left: 3px solid var(--gold);
 }
 .pillar-icon { font-size: 1.3rem; margin-top: 2px; flex-shrink: 0; }
-.pillar h4 { font-size: 0.82rem; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+.pillar h4 { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
 .pillar p { font-size: 0.75rem; font-weight: 300; color: var(--gray); line-height: 1.5; }
 
 .team-intro {
-  display: flex; gap: 20px; padding: 24px; background: var(--white);
+  display: flex; gap: 20px; padding: 24px; background: rgba(255,255,255,0.06);
   border-radius: var(--radius); border: 1px solid var(--gray-light);
   margin-top: 32px;
 }
@@ -401,8 +401,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
   margin: 0 auto 10px; border: 2px solid var(--gold);
 }
-.team-member-mini h5 { font-size: 0.8rem; font-weight: 600; color: var(--blue); }
-.team-member-mini p { font-size: 0.68rem; color: var(--gray); margin-top: 2px; }
+.team-member-mini h5 { font-size: 0.8rem; font-weight: 600; color: var(--white); }
+.team-member-mini p { font-size: 0.68rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
 .team-divider { width: 1px; background: var(--gray-light); }
 
 /* ═══════════════════════════════════════════
@@ -959,7 +959,7 @@ footer {
 .gallery-track {
   display: flex;
   gap: 12px;
-  animation: galleryScroll 40s linear infinite;
+  animation: galleryScroll 60s linear infinite;
   width: max-content;
 }
 .gallery-track:hover { animation-play-state: paused; }
@@ -980,6 +980,15 @@ footer {
 @keyframes galleryScroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+/* ── Gallery Row 2 — scrolls RIGHT */
+.gallery-track-reverse {
+  animation: galleryScrollReverse 130s linear infinite;
+}
+.gallery-track-reverse:hover { animation-play-state: paused; }
+@keyframes galleryScrollReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 .gallery-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
